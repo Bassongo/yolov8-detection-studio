@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db
+~$*
+runs/
+*.log
+.ipynb_checkpoints/
+
+# Fichiers non essentiels pour le deploiement
+demo_yollo.mp4
+datasets/
+*.ipynb
+*.pptx
+*.pdf
+package-lock.json
+.claude/
+
+# Modeles : telecharges depuis Hugging Face Space (voir README)
+*.pt
+*.pth
+
+# Images de test
+test_images/
