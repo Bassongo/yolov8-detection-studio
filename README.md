@@ -1,21 +1,21 @@
 # YOLOv8 Detection Studio
 
-Studio interactif autour de YOLOv8 : detection d'objets sur image, webcam et video.
+Studio interactif autour de YOLOv8 : détection d'objets sur image, webcam et vidéo.
 
-**Demo en ligne :** https://huggingface.co/spaces/bassongo/deepl
+**Démo en ligne :** https://huggingface.co/spaces/bassongo/deepl
 
-## Fonctionnalites
+## Fonctionnalités
 
-- Detection sur image avec choix du seuil de confiance et IoU
-- Detection en temps reel via webcam
-- Traitement de video avec statistiques par classe
-- Comparaison entre modele pre-entraine et fine-tune
+- Détection sur image avec choix du seuil de confiance et IoU
+- Détection en temps réel via webcam
+- Traitement de vidéo avec statistiques par classe
+- Comparaison entre un modèle pré-entraîné et un modèle fine-tuné
 
 ## Stack
 
 - PyTorch + Ultralytics YOLOv8
 - Gradio (interface)
-- OpenCV (traitement video)
+- OpenCV (traitement vidéo)
 - Dataset COCO 128
 
 ## Installation locale
@@ -26,14 +26,14 @@ cd yolov8-detection-studio
 pip install -r requirements.txt
 ```
 
-### Recuperer les modeles
+### Récupérer les modèles
 
-Les poids `yolov8n.pt` (pre-entraine) et `best.pt` (fine-tune) ne sont pas inclus dans le repo (limite LFS GitHub). Recupere-les depuis le Hugging Face Space :
+Les poids `yolov8n.pt` (pré-entraîné) et `best.pt` (fine-tuné) ne sont pas inclus dans le dépôt (limite LFS GitHub). Vous pouvez les récupérer ainsi :
 
 ```bash
-# yolov8n.pt sera telecharge automatiquement par Ultralytics au premier lancement
+# yolov8n.pt sera téléchargé automatiquement par Ultralytics au premier lancement
 
-# best.pt (fine-tune) - depuis le Space HF
+# best.pt (fine-tuné) - depuis le Space Hugging Face
 curl -L -o best.pt https://huggingface.co/spaces/bassongo/deepl/resolve/main/best.pt
 ```
 
@@ -50,17 +50,29 @@ L'application s'ouvre sur http://localhost:7860
 ```
 .
 ├── app.py              # Dashboard Gradio
-├── requirements.txt    # Dependances Python
+├── requirements.txt    # Dépendances Python
 └── README.md
 ```
 
-## Plan d'expose (Projet Deep Learning - AS3)
+## Plan d'exposé (Projet Deep Learning - AS3)
 
-1. Introduction a la detection d'objets
+Nous avons structuré notre travail autour des quatre axes suivants :
+
+1. Introduction à la détection d'objets
 2. Architecture YOLOv8 (Backbone CSPDarknet, Neck FPN+PAN, Head Anchor-Free)
-3. Entrainement sur dataset annote (COCO128)
-4. Demonstration temps reel via le studio interactif
+3. Entraînement sur dataset annoté (COCO128)
+4. Démonstration temps réel via le studio interactif
 
-## License
+## Équipe
+
+Projet réalisé en groupe dans le cadre du cours de Deep Learning, promotion AS3.
+
+Membres du groupe :
+- [Membre 1]
+- [Membre 2]
+- [Membre 3]
+- [Membre 4]
+
+## Licence
 
 MIT
