@@ -65,13 +65,15 @@ Nous avons structuré notre travail autour des quatre axes suivants :
 
 ## Équipe
 
-Projet réalisé en groupe dans le cadre du cours de Deep Learning, promotion AS3.
+Projet réalisé dans le cadre du cours de Deep Learning à l'École Nationale de la Statistique et de l'Analyse Économique Pierre NDIAYE (ENSAE), promotion AS3.
 
 Membres du groupe :
-- [Membre 1]
-- [Membre 2]
-- [Membre 3]
-- [Membre 4]
+- Ndeye Aissatou CISSE
+- Armand Djekonbe NDOASNAN
+- Marc MARE
+- Cheikh Oumar SAKHO
+
+Sous la supervision de Mme Fatou SALL, Ingénieur Statisticien Économiste (ISE).
 
 ## Licence
 
