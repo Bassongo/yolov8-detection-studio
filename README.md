@@ -1,24 +1,33 @@
 # YOLOv8 Detection Studio
 
-Studio interactif autour de YOLOv8 : détection d'objets sur image, webcam et vidéo.
+> Interactive object detection studio built on YOLOv8: run detection on images, live webcam streams and video files from a single Gradio interface.
 
-**Démo en ligne :** https://huggingface.co/spaces/bassongo/deepl
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
+[![Ultralytics](https://img.shields.io/badge/Ultralytics-YOLOv8-00BFFF.svg)](https://github.com/ultralytics/ultralytics)
+[![Gradio](https://img.shields.io/badge/Gradio-6.0+-FF7C00.svg)](https://www.gradio.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Fonctionnalités
+**[Live demo](https://huggingface.co/spaces/bassongo/deepl)**
 
-- Détection sur image avec choix du seuil de confiance et IoU
-- Détection en temps réel via webcam
-- Traitement de vidéo avec statistiques par classe
-- Comparaison entre un modèle pré-entraîné et un modèle fine-tuné
+## Overview
 
-## Stack
+This studio wraps a YOLOv8 detection pipeline in an interactive interface, so detection parameters can be adjusted and their effect observed immediately. It supports three input modes (image, webcam, video) and lets a pretrained model be compared side by side with a fine-tuned one.
 
-- PyTorch + Ultralytics YOLOv8
+## Features
+
+- Image detection with adjustable confidence and IoU thresholds
+- Real-time detection through the webcam
+- Video processing with per-class detection statistics
+- Side-by-side comparison of a pretrained model and a fine-tuned model
+
+## Tech Stack
+
+- PyTorch and Ultralytics YOLOv8
 - Gradio (interface)
-- OpenCV (traitement vidéo)
-- Dataset COCO 128
+- OpenCV (video processing)
+- COCO128 dataset
 
-## Installation locale
+## Quick Start
 
 ```bash
 git clone https://github.com/Bassongo/yolov8-detection-studio.git
@@ -26,55 +35,61 @@ cd yolov8-detection-studio
 pip install -r requirements.txt
 ```
 
-### Récupérer les modèles
+### Getting the model weights
 
-Les poids `yolov8n.pt` (pré-entraîné) et `best.pt` (fine-tuné) ne sont pas inclus dans le dépôt (limite LFS GitHub). Vous pouvez les récupérer ainsi :
+The `yolov8n.pt` (pretrained) and `best.pt` (fine-tuned) weights are not tracked in the repository because of GitHub LFS limits. Retrieve them as follows:
 
 ```bash
-# yolov8n.pt sera téléchargé automatiquement par Ultralytics au premier lancement
+# yolov8n.pt is downloaded automatically by Ultralytics on first run
 
-# best.pt (fine-tuné) - depuis le Space Hugging Face
+# best.pt (fine-tuned), from the Hugging Face Space
 curl -L -o best.pt https://huggingface.co/spaces/bassongo/deepl/resolve/main/best.pt
 ```
 
-### Lancement
+### Running the app
 
 ```bash
 python app.py
 ```
 
-L'application s'ouvre sur http://localhost:7860
+The application opens at http://localhost:7860
 
-## Structure du projet
+## Project Structure
 
 ```
 .
-├── app.py              # Dashboard Gradio
-├── requirements.txt    # Dépendances Python
+├── app.py              # Gradio dashboard
+├── requirements.txt    # Python dependencies
 └── README.md
 ```
 
-## Plan d'exposé (Projet Deep Learning - AS3)
+## Presentation Outline
 
-Nous avons structuré notre travail autour des quatre axes suivants :
+The work was structured around four topics:
 
-1. Introduction à la détection d'objets
-2. Architecture YOLOv8 (Backbone CSPDarknet, Neck FPN+PAN, Head Anchor-Free)
-3. Entraînement sur dataset annoté (COCO128)
-4. Démonstration temps réel via le studio interactif
+1. Introduction to object detection
+2. YOLOv8 architecture (CSPDarknet backbone, FPN and PAN neck, anchor-free head)
+3. Training on an annotated dataset (COCO128)
+4. Real-time demonstration through the interactive studio
 
-## Équipe
+## Team
 
-Projet réalisé dans le cadre du cours de Deep Learning à l'École Nationale de la Statistique et de l'Analyse Économique Pierre NDIAYE (ENSAE), promotion AS3.
+Academic project for the Deep Learning course at the École Nationale de la Statistique et de l'Analyse Économique Pierre Ndiaye (ENSAE Dakar), AS3 class.
 
-Membres du groupe :
-- Ndeye Aissatou CISSE
-- Armand Djekonbe NDOASNAN
-- Marc MARE
-- Cheikh Oumar SAKHO
+| Name | Role |
+|---|---|
+| Ndeye Aissatou Cisse | Student |
+| Armand Djekonbe Ndoasnan | Student |
+| **Marc Mare** | Student |
+| Cheikh Oumar Sakho | Student |
 
-Sous la supervision de Mme Fatou SALL, Ingénieur Statisticien Économiste (ISE).
+Supervised by Mrs Fatou Sall, Statistician Economist Engineer (ISE).
 
-## Licence
+## Author
 
-MIT
+**Marc Mare**, [LinkedIn](https://www.linkedin.com/in/marc-mare-4875a6277) · [GitHub](https://github.com/Bassongo)
+ENSAE Dakar | MSc SEP, University of Reims (2026)
+
+## License
+
+MIT License, see [LICENSE](LICENSE) for details.
